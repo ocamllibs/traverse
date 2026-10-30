@@ -171,8 +171,7 @@ module Option = struct
   end
 end
 
-module Ref (Applicative: Modules.Applicative.S)
-    (Arity : Modules.Arity.NonNullS) = struct
+module Ref = struct
   module Arity = UnaryArity (struct type 'a t = 'a ref end)
 
   module Make (Applicative: Modules.Applicative.S) = struct
@@ -200,8 +199,7 @@ module BinaryArity (T : BinaryTypeS) = struct
           [`Not_empty]) t
 end
 
-module Result (Applicative: Modules.Applicative.S)
-    (Arity : Modules.Arity.NonNullS) = struct
+module Result = struct
   module Arity = BinaryArity (Result)
 
   module Make (Applicative: Modules.Applicative.S) = struct
