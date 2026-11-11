@@ -1,3 +1,10 @@
+# Unreleased
+
+- Fix: `Traverse.Primitives.Ref` and `Traverse.Primitives.Result` were
+  functors with unused parameters, which made `Ref.Make` and
+  `Result.Make` unusable; they are now plain modules, like the other
+  primitive traversers
+
 # Version 0.3.0, 2020-09-22
 
 - Port to ppxlib 0.16 / ocaml-migrate-parsetree 2.0.0

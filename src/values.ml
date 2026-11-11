@@ -64,7 +64,7 @@ module Applicative = struct
           (Ppxlib.Ast_helper.Mod.unpack [%expr m])
           (Traverse_meta.compose (fun i acc ->
             [%expr let Eq = [%meta Ppxlib.Ast_helper.Exp.ident (Metapp.mkloc
-              (Longident.Ldot (Lident modname, Traverse_meta.eqi i)))] in
+              (Ppxlib.Longident.Ldot (Lident modname, Traverse_meta.eqi i)))] in
               [%meta acc]])
               (k tim))]]]
 

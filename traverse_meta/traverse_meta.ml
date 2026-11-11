@@ -1,7 +1,7 @@
 let variable_count = 32
 
 let mklid s =
-  Metapp.mkloc (Longident.Lident s)
+  Metapp.mkloc (Ppxlib.Longident.Lident s)
 
 let rec compose_n n f unit =
   if n > 0 then
