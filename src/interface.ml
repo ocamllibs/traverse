@@ -25,7 +25,7 @@ end
 type 'a desc =
   | A :
       [%meta Ppxlib.Ast_helper.Typ.package
-        (Metapp.mkloc (Longident.Lident "MonomorphicS"))
+        (Metapp.mkloc (Ppxlib.Longident.Lident "MonomorphicS"))
         (List.flatten (List.init Traverse_meta.variable_count (fun i ->
           let ti = Traverse_meta.ti i in
           let ti_t = Traverse_meta.ti_t i in
